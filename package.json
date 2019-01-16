@@ -13,10 +13,7 @@
   "devDependencies": {},
   "scripts": {
     "s": "gitbook install && gitbook build && gitbook serve",
-    "d": "gitbook install && gitbook build && node scripts/deploy-gh-pages.js",
-    "deploy": "node scripts/deploy-gh-pages.js",
-    "publish": "npm run s && npm run deploy",
-    "port": "lsof -i :35729"
+    "d": "gitbook install && gitbook build && node scripts/deploy-gh-pages.js && node scripts/auto-bak.js"
   },
   "repository": {
     "type": "git",

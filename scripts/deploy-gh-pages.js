@@ -1,7 +1,5 @@
 require("shelljs/global");
 
-echo("======================");
-
 run();
 
 function run() {

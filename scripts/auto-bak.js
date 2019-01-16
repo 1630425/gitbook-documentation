@@ -1,7 +1,7 @@
 require("shelljs/global");
 
 try {
-    hexo.on("deployAfter", function() {
+    hexo.on("dAfter", function() {
         //当deploy完成后执行备份源码
         run();
     });
@@ -15,7 +15,7 @@ function run() {
         exit(1);
     } else {
         echo("======================Auto Backup Begin======================");
-        cd("~/1630425.github.io");
+        cd("~/gitbook-documentation");
         echo("----------------------Updated----------------------");
         exec("git pull origin");
         //此处修改为Hexo根目录路径
