@@ -1,0 +1,27 @@
+{
+  "name": "gitbook-documentation",
+  "version": "1.0.0",
+  "description": "这本书包含了GitBook的所有文档（平台和工具链）",
+  "main": "index.js",
+  "dependencies": {
+    "gitbook-plugin-back-to-top-button": "^0.1.4",
+    "gitbook-plugin-donate": "^1.0.2",
+    "gitbook-plugin-expandable-chapters": "^0.2.0",
+    "hexo-deployer-git": "^1.0.0",
+    "shelljs": "^0.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "s": "gitbook install && gitbook build && gitbook serve",
+    "d": "gitbook install && gitbook build && node scripts/deploy-gh-pages.js",
+    "deploy": "node scripts/deploy-gh-pages.js",
+    "publish": "npm run s && npm run deploy",
+    "port": "lsof -i :35729"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/codeserver/gitbook-documentation.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
