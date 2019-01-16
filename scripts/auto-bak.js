@@ -1,13 +1,6 @@
 require("shelljs/global");
 
-try {
-    hexo.on("dAfter", function() {
-        //当deploy完成后执行备份源码
-        run();
-    });
-} catch (e) {
-    console.log("产生了一个错误<(￣3￣)> !，错误详情为：" + e.toString());
-}
+run();
 
 function run() {
     if (!which("git")) {
