@@ -11,7 +11,7 @@ function run() {
         var gh_pages = "~/gitbooks/gh-pages/gitbook-documentation/";
         var git_book = "~/gitbooks/gitbook/gitbook-documentation/";
         var command = 'rm -rf ' + gh_pages + '* && cp -R ' + git_book +'_book/* ' + gh_pages;
-        echo("--------"+command);
+        echo("command:"+command);
         exec(command);
         
         cd(gh_pages);
