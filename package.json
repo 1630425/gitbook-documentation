@@ -12,8 +12,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "s": "gitbook install && gitbook build && gitbook serve",
-    "d": "gitbook install && gitbook build && node scripts/deploy-gh-pages.js && node scripts/auto-bak.js"
+    "b": "gitbook install && gitbook build",
+    "s": "npm run b && gitbook serve",
+    "d": "npm run b && node scripts/deploy-gh-pages.js && node scripts/auto-bak.js"
   },
   "repository": {
     "type": "git",
