@@ -1,0 +1,25 @@
+## 部署
+<pre>
+目录结构如下：
+gitbooks gh-pages gitbook-documentation
+
+         gitbook  gitbook-documentation
+
+
+mkdir -p ~/gitbooks/gh-pages && mkdir -p ~/gitbooks/gitbook
+cd ~/gitbooks/gh-pages
+git clone git@github.com:1630425/gitbook-documentation.git
+
+cd ~/gitbooks/gitbook
+git clone https://gitee.com/codeserver/gitbook-documentation.git
+
+配置自动部署路径：
+cd gitbook-documentation/scripts
+vim *.js
+
+npm run s #启动
+
+npm install --save shelljs
+
+npm run d #部署
+</pre>
