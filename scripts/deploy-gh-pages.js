@@ -8,9 +8,13 @@ function run() {
         exit(1);
     } else {
         echo("======================Auto Deploy Github Pages Begin======================");
-        exec("rm -rf ~/gitbookd/* && cp -R ~/gitbook-documentation/_book/* ~/gitbookd");
+        var gh_pages = "~/gitbooks/gh-pages/gitbook-documentation/";
+        var git_book = "~/gitbooks/gitbook/gitbook-documentation/";
+        var command = 'rm -rf ' + gh_pages + '* && cp -R ' + git_book +'_book/* ' + gh_pages;
+        echo("--------"+command);
+        exec(command);
         
-        cd("~/gitbookd");
+        cd(gh_pages);
         //此处修改为Hexo根目录路径
         if (exec("git add --all").code !== 0) {
             echo("Error: Git add failed");

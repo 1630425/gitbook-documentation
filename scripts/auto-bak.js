@@ -8,7 +8,7 @@ function run() {
         exit(1);
     } else {
         echo("======================Auto Backup Begin======================");
-        cd("~/gitbook-documentation");
+        cd("~/gitbooks/gitbook/gitbook-documentation");
         echo("----------------------Updated----------------------");
         exec("git pull origin");
         //此处修改为Hexo根目录路径
