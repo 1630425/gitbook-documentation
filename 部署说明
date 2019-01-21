@@ -8,7 +8,7 @@ gitbooks gh-pages gitbook-documentation
 
 mkdir -p ~/gitbooks/gh-pages && mkdir -p ~/gitbooks/gitbook
 cd ~/gitbooks/gh-pages
-git clone git@github.com:1630425/gitbook-documentation.git
+git clone https://github.com/1630425/gitbook-documentation.git
 
 cd ~/gitbooks/gitbook
 git clone https://gitee.com/codeserver/gitbook-documentation.git
@@ -17,6 +17,7 @@ git clone https://gitee.com/codeserver/gitbook-documentation.git
 cd gitbook-documentation/scripts
 vim *.js
 
+cd ~/gitbooks/gitbook/gitbook-documentation
 npm run s #启动
 
 npm install --save shelljs
