@@ -8,10 +8,21 @@ function run() {
         exit(1);
     } else {
         echo("======================Auto Backup Begin======================");
-        var git_book = "~/gitbooks/gitbook/gitbook-documentation/";
+
+        var odir_book = exec(odir_book=`ls ~/gitbooks/gitbook`);
+
+        var git_book = "~/gitbooks/gitbook/" + odir_book + '/';
+
+        echo("git_book:"+git_book);
+
+        git_book = git_book.replace(/[\r\n]/g,"");
+
+        echo("git_book1:"+git_book);
+
         cd(git_book);
         echo("----------------------Updated----------------------");
         exec("git pull origin");
+exit(1);
         //此处修改为Hexo根目录路径
         if (exec("git add --all").code !== 0) {
             echo("Error: Git add failed");
