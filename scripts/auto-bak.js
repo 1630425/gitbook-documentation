@@ -22,7 +22,6 @@ function run() {
         cd(git_book);
         echo("----------------------Updated----------------------");
         exec("git pull origin");
-exit(1);
         //此处修改为Hexo根目录路径
         if (exec("git add --all").code !== 0) {
             echo("Error: Git add failed");
